@@ -156,3 +156,24 @@ body::before { opacity: .18; }
   .photo-card figcaption { font-size: 10px; }
   .contact-panel { border-radius: 18px; }
 }
+
+
+/* Center and scale the 3D object as the visual anchor of the intro. */
+@media (min-width: 901px) {
+  .intro { grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr); }
+  .intro-flag--3d { width: min(100%, 820px); justify-self: center; }
+  .intro-flag-frame { display: grid; min-height: 560px; aspect-ratio: auto; place-items: center; overflow: visible; }
+  .vinyl-model { width: 100%; height: 540px; transform: scale(1.18); transform-origin: 50% 50%; }
+}
+
+@media (min-width: 641px) and (max-width: 900px) {
+  .intro-flag--3d { width: min(100%, 720px); justify-self: center; }
+  .intro-flag-frame { display: grid; min-height: 460px; place-items: center; overflow: visible; }
+  .vinyl-model { height: 440px; transform: scale(1.1); transform-origin: 50% 50%; }
+}
+
+@media (max-width: 640px) {
+  .intro-flag--3d { width: 100%; }
+  .intro-flag-frame { display: grid; min-height: 360px; place-items: center; overflow: visible; }
+  .vinyl-model { height: 350px; transform: scale(1.08); transform-origin: 50% 50%; }
+}
