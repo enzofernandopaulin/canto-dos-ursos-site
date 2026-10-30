@@ -163,17 +163,23 @@ body::before { opacity: .18; }
   .intro { grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr); }
   .intro-flag--3d { width: min(100%, 820px); justify-self: center; }
   .intro-flag-frame { display: grid; min-height: 560px; aspect-ratio: auto; place-items: center; overflow: visible; }
-  .vinyl-model { width: 100%; height: 540px; transform: scale(1.18); transform-origin: 50% 50%; }
+  .intro-flag-frame .vinyl-model { width: 100%; height: 570px; transform: scale(1.3); transform-origin: 50% 50%; }
+  .vinyl-orbit--one { width: 88%; }
+  .vinyl-orbit--two { width: 74%; }
 }
 
 @media (min-width: 641px) and (max-width: 900px) {
   .intro-flag--3d { width: min(100%, 720px); justify-self: center; }
   .intro-flag-frame { display: grid; min-height: 460px; place-items: center; overflow: visible; }
-  .vinyl-model { height: 440px; transform: scale(1.1); transform-origin: 50% 50%; }
+  .intro-flag-frame .vinyl-model { height: 460px; transform: scale(1.18); transform-origin: 50% 50%; }
+  .vinyl-orbit--one { width: 86%; }
+  .vinyl-orbit--two { width: 72%; }
 }
 
 @media (max-width: 640px) {
   .intro-flag--3d { width: 100%; }
   .intro-flag-frame { display: grid; min-height: 360px; place-items: center; overflow: visible; }
-  .vinyl-model { height: 350px; transform: scale(1.08); transform-origin: 50% 50%; }
+  .intro-flag-frame .vinyl-model { height: 370px; transform: scale(1.12); transform-origin: 50% 50%; }
+  .vinyl-orbit--one { width: 86%; }
+  .vinyl-orbit--two { width: 72%; }
 }
