@@ -11,8 +11,24 @@
   if (reduced) {
     gsap.set(stage, { opacity: 1, y: 0, scale: 1, rotateX: 0, rotateY: 0 });
     model.removeAttribute('auto-rotate');
+    model.cameraOrbit = '0deg 75deg auto';
     return;
   }
+
+  // Keep the album centered: a gentle left/right camera sweep replaces the
+  // model-viewer 360° orbit, which made the rectangular sleeve look unbalanced.
+  const orbit = { azimuth: -18 };
+  model.cameraOrbit = '-18deg 75deg auto';
+  gsap.to(orbit, {
+    azimuth: 18,
+    duration: 4.8,
+    repeat: -1,
+    yoyo: true,
+    ease: 'sine.inOut',
+    onUpdate: () => {
+      model.cameraOrbit = `${orbit.azimuth.toFixed(2)}deg 75deg auto`;
+    },
+  });
 
   gsap.fromTo(stage,
     { opacity: 0, y: 36, scale: .92, rotateX: 8 },
