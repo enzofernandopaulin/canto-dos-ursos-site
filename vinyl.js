@@ -24,12 +24,12 @@
   gsap.to('.vinyl-orbit--two', { rotate: -360, duration: 24, repeat: -1, ease: 'none' });
   gsap.to('.vinyl-glow', { scale: 1.12, opacity: .72, duration: 2.2, repeat: -1, yoyo: true, ease: 'sine.inOut' });
 
-  const reset = () => gsap.to(stage, { rotateX: 0, rotateY: 0, duration: .65, ease: 'power3.out', overwrite: true });
+  const reset = () => gsap.to(stage, { rotateX: 0, rotateY: 0, duration: .8, ease: 'power3.out', overwrite: true });
   stage.addEventListener('pointermove', event => {
     const rect = stage.getBoundingClientRect();
     const x = (event.clientX - rect.left) / rect.width - .5;
     const y = (event.clientY - rect.top) / rect.height - .5;
-    gsap.to(stage, { rotateY: x * 12, rotateX: y * -10, duration: .55, ease: 'power2.out', overwrite: true });
+    gsap.to(stage, { rotateY: x * 6, rotateX: y * -4, duration: .75, ease: 'power2.out', overwrite: true });
   });
   stage.addEventListener('pointerleave', reset);
 })();
