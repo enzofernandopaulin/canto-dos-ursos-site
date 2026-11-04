@@ -213,3 +213,13 @@ body::before { opacity: .18; }
 }
 .intro-flag-frame > .vinyl-orbit--one { width: 82%; aspect-ratio: 1; }
 .intro-flag-frame > .vinyl-orbit--two { width: 64%; aspect-ratio: 1; }
+
+@media (min-width: 901px) {
+  .intro-flag-frame > .vinyl-model { transform: translateY(-64px); }
+}
+@media (min-width: 641px) and (max-width: 900px) {
+  .intro-flag-frame > .vinyl-model { transform: translateY(-40px); }
+}
+@media (max-width: 640px) {
+  .intro-flag-frame > .vinyl-model { transform: translateY(-24px); }
+}
